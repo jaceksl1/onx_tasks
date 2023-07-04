@@ -13,14 +13,16 @@
     class TextInput
     {
         protected $value = '';
-
+        // function which will add text as a value
         public function add($text)
         {
+            //object value as text
             $this->value .= $text;
         }
 
         public function getValue()
         {
+            // return object value
             return $this->value;
         }
     }
@@ -37,6 +39,7 @@
     $textInput->add('Hello');
     $textInput->add(' World');
     $textInput->add('123');
+    $textInput->add(123);
     echo $textInput->getValue();
 
     ?>
