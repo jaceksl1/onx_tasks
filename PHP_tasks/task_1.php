@@ -19,7 +19,7 @@
             // 2b - new function with arg as a $arg  
             return function ($arg) use ($functions) {
                 $result = $arg;
-                // 3 - run first function and 
+                // 3 - run first function and every other function with have result of last one function
                 foreach ($functions as $function) {
                     $result = $function($result);
                 }
@@ -29,7 +29,7 @@
         }
     }
 
-
+    // 4 - check if method and fucntions are wokirng correctly
     $pipeline = Pipeline::make(
         function ($var) {
             return $var * 3;
@@ -42,6 +42,7 @@
         },
     );
 
+    // after running PHP Server result is correct and &result = 5;
     $result = $pipeline(3);
     echo $result;
     ?>
