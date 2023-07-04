@@ -46,9 +46,17 @@
     $textInput->add(' World');
     $textInput->add('123');
     $textInput->add(123);
-    echo $textInput->getValue();
 
+    $numericInput = new NumericInput();
+    $numericInput->add('123');
+    $numericInput->add('abc');
+    $numericInput->add('456');
+    $numericInput->add(456);
     ?>
+
+    <div><?php echo $textInput->getValue(); ?></div>
+    <br>
+    <div><?php echo $numericInput->getValue() ?></div>
 </body>
 
 </html>
